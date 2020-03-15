@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, jsonify, Response
 import pandas as pd
 
 app = Flask(__name__)
-tweet_data = pd.read_csv('tweet_screener.csv')
+tweet_data = pd.read_csv('tweet.csv')
 
 @app.route('/')
 def tweet():
@@ -22,4 +22,4 @@ def analyze():
 		return render_template('frisky.html',twitter = tweet, scores = score)
 
 if __name__ == '__main__':
-	app.run(host = '0.0.0.0', port = 80, debug = True)
+	app.run(host = "0.0.0.0", port = 80)
