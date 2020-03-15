@@ -2,7 +2,6 @@ from flask import Flask, request, render_template, jsonify, Response
 import pandas as pd
 
 app = Flask(__name__)
-tweet_data = pd.read_csv('tweet.csv')
 
 @app.route('/')
 def tweet():
