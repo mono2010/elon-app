@@ -10,7 +10,6 @@ def tweet():
 @app.route('/analyze')
 def analyze():
 
-	sample =tweet_data.sample(n = 1)
 	sample = pd.read_csv('tweets.csv').sample(n = 1)
 	tweet = sample['tweet'].iloc[0]
 	score = round(sample['risky'].iloc[0], 2)
